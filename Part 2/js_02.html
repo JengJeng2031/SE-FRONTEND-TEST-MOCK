@@ -14,19 +14,19 @@
 <p id="str1">088-9999999</p>
 
 <script>
-// Store original data
+
 const originalPhoneNumber = document.getElementById("ans1").textContent;
 
 function javascriptPhoneToggle() {
-    const isMasked = document.getElementById("str1").textContent.includes("*");
+    const isMasked = document.getElementById("str1").textContent.includes("x");
 
     if (isMasked) {
-        // Show the phone number
+
         document.getElementById("str1").textContent = originalPhoneNumber;
         document.getElementById("btn2_1").textContent = "Hide";
     } else {
-        // Mask the phone number with '*'
-        const maskedPhone = 'X'.repeat(originalPhoneNumber.length);
+
+        const maskedPhone = 'x'.repeat(originalPhoneNumber.length);
         document.getElementById("str1").textContent = maskedPhone;
         document.getElementById("btn2_1").textContent = "Show";
     }
@@ -89,7 +89,7 @@ function showCurrentDate() {
 <h1>JavaScript 2.3 : 3 points</h1>
 <p>- คลิกที่ปุ่ม "คลิกที่นี่ JS 2.3" ข้อความที่กำหนดจะค่อยๆ สไลด์หายไป และกลับมาใหม่เมื่อคลิกปุ่มเดิมอีกครั้ง</p>
 
-<div id="ans3" class="alert alert-dismissable alert-danger">
+<div id="ans3" class="">
 	<strong>ระวัง!</strong> เนื้อหาส่วนนี้จะค่อยๆ สไลด์หายไป และกลับมาใหม่. <br>
 	<strong>ระวัง!</strong> เนื้อหาส่วนนี้จะค่อยๆ สไลด์หายไป และกลับมาใหม่.
 </div><br>
