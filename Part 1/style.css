@@ -1,0 +1,37 @@
+.my-style{
+    color: blue;
+}
+label{
+    color: green;
+}
+#my-style{
+    color: red;
+}
+#text0{
+    font-weight: bold;
+}
+#text1{
+    text-decoration:line-through
+}
+#text2{
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+#text3{
+    text-transform:uppercase;
+}
+tr{
+    font-size: 24px;
+}
+#td1{
+    text-align: center;
+}
+#td2{
+    text-align: right;
+}
+#td3{
+    vertical-align: bottom;
+}
+#td4{
+    vertical-align: top;
+}

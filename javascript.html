@@ -1,0 +1,66 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<h1> JavaScript #2 : Data Privacy (15 Marks)</h1>
+
+<button class="btn btn-primary" id="btn1" onclick="javascript1()">Insert Name</button>
+<button class="btn btn-primary" onclick="javascript_lev2()">Slide</button>
+<button class="btn btn-primary" id="btn2" onclick="javascript3()" disabled>Show/Hide</button>
+
+<div id="display">
+    <p id="str1">First Name : xxxxxxx</p>
+    <p id="str2">Last Name : xxxxxxx</p>
+    <p id="str3">String length : xx</p>
+</div>
+
+<!-- Coding JavaScript 2 here!!!! -->
+<script>
+    let originalData = {}; 
+
+    function javascript1() {
+        var firstName = prompt("Please enter your First Name", "");
+        if (firstName != null) {
+            var lastName = prompt("Please enter your Last Name", "");
+            if (lastName != null) {
+                // Store original text
+                originalData.firstName = firstName;
+                originalData.lastName = lastName;
+                originalData.fullNameLength = firstName.length + lastName.length;
+
+                document.getElementById("str1").textContent = "First Name : " + firstName;
+                document.getElementById("str2").textContent = "Last Name : " + lastName;
+                document.getElementById("str3").textContent = "String length : " + originalData.fullNameLength;
+
+                // Enable Show/Hide button
+                document.getElementById("btn2").disabled = false;
+            }
+        }
+    }
+
+    // Function to slide the text
+    function javascript_lev2() {
+        $("#display").slideToggle();
+    }
+
+    // Function to show/hide text
+    function javascript3() {
+        const isMasked = document.getElementById("str1").textContent.includes("****");
+
+        if (isMasked) {
+            
+            document.getElementById("str1").textContent = "First Name : " + originalData.firstName;
+            document.getElementById("str2").textContent = "Last Name : " + originalData.lastName;
+            document.getElementById("str3").textContent = "String length : " + originalData.fullNameLength;
+            document.getElementById("btn2").textContent = "Hide";
+        } else {
+            
+            const maskedFirstName = '*'.repeat(originalData.firstName.length);
+            const maskedLastName = '*'.repeat(originalData.lastName.length);
+            const maskedFullNameLength = '*'.repeat(String(originalData.fullNameLength).length);
+
+            document.getElementById("str1").textContent = "First Name : " + maskedFirstName;
+            document.getElementById("str2").textContent = "Last Name : " + maskedLastName;
+            document.getElementById("str3").textContent = "String length : " + maskedFullNameLength;
+            document.getElementById("btn2").textContent = "Show";
+        }
+    }
+</script>

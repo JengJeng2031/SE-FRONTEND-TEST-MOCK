@@ -1,0 +1,37 @@
+img{
+    width: 800px;
+    height: 200px;
+}
+#grid{
+    width: 200px;
+    height: 250px;    
+}
+.box-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#box1{
+    border-style: solid;
+    grid-row-start: span 2;
+
+}
+#box2{
+    border-style: solid;
+    grid-row-start: span 1;
+}
+#box3{
+    border-style: solid;
+}
+#box4{
+    border-style: solid;
+}
+#box5{
+    border-style: solid;
+    grid-row-start: span 2;
+}
+#box6{
+    height: 83px;
+    border-style: solid;
+    grid-column-start: span 2;
+}
