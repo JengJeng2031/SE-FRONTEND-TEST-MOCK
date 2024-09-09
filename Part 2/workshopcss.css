@@ -1,0 +1,27 @@
+#box1 {
+    border: 5px solid red; 
+    padding: 50px; 
+  }
+
+  /* My content 2 styling */
+#box2 {
+    border: 3px dashed blue; /* Dashed blue border */
+    padding-left: 80px; 
+}
+.block{
+    width: 100px;
+    height: 100px;
+    border: 3px solid;
+}
+.typeA{
+    margin: 50px
+}
+#block4{
+    margin-left: 100px;
+}
+#shape{
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+    background: linear-gradient(#eceff1,#03a9f4);
+}
