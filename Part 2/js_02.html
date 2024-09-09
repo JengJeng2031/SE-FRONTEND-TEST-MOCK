@@ -1,13 +1,43 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<h1>JavaScript 2.1 : 3 points</h1>
+<p>- คลิกที่ปุ่ม "คลิกที่นี่ JS 2.1" จะเปลี่ยนข้อความ "xxx-xxxxxxx" เป็นเบอร์โทรที่ซ่อนอยู่</p>
+<p>- และเมื่อคลิกปุ่มเดิมอีกครั้ง จะเปลี่ยนเบอร์โทร กลับเป็นข้อความ "xxx-xxxxxxx" เช่นเดิม</p>
 
-<h1> JavaScript 2.1 : 3 points </h1>
-- คลิกที่ปุ่ม "คลิกที่นี่ JS 2.1" จะเปลี่ยนข้อความ "xxx-xxxxxxx" เป็นเบอร์โทรที่ซ่อนอยู่ <br>
-- และเมื่อคลิกปุ่มเดิมอีกครั้ง จะเปลี่ยนเบอร์โทร กลับเป็นข้อความ "xxx-xxxxxxx" เช่นเดิม <br><br>
+<!-- Hidden phone number -->
+<p id="ans1" style="display:none">088-9999999</p>
 
+<!-- Button to toggle the text -->
+<button id="btn2_1" onclick="javascriptPhoneToggle()">คลิกที่นี่ JS 2.1</button>
 
-<p style="display:none" id="ans1">088-9999999</p>
-<button class="btn btn-primary" id="btn2_1">คลิกที่นี่ JS 2.1</button>
-<p id="str1" name="str1">xxx-xxxxxxx</p>
+<!-- Placeholder text -->
+<p id="str1">088-9999999</p>
+
+<script>
+// Store original data
+const originalPhoneNumber = document.getElementById("ans1").textContent;
+
+function javascriptPhoneToggle() {
+    const isMasked = document.getElementById("str1").textContent.includes("*");
+
+    if (isMasked) {
+        // Show the phone number
+        document.getElementById("str1").textContent = originalPhoneNumber;
+        document.getElementById("btn2_1").textContent = "Hide";
+    } else {
+        // Mask the phone number with '*'
+        const maskedPhone = '*'.repeat(originalPhoneNumber.length);
+        document.getElementById("str1").textContent = maskedPhone;
+        document.getElementById("btn2_1").textContent = "Show";
+    }
+}
+</script>
+
+</script>
+
+</script>
+
+</script>
+
 
 <!-- Coding JavaScript 2.1 here!!!! -->
 
